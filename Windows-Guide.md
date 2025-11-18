@@ -53,7 +53,6 @@ foreach ($sp in $searchPaths) {
 
 
 ### ⚡ Fast Clean (Recommended)
-
 # Run in PowerShell as Administrator
 Write-Host "Starting Fast Warp Registry Cleanup..." -ForegroundColor Cyan
 
@@ -105,8 +104,7 @@ $targetPaths = @(
     "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall"
 )
 
-Write-Host "
-Searching common locations for Warp entries..." -ForegroundColor Cyan
+Write-Host "`nSearching common locations for Warp entries..." -ForegroundColor Cyan
 
 foreach ($path in $targetPaths) {
     try {
@@ -122,13 +120,11 @@ foreach ($path in $targetPaths) {
     } catch {}
 }
 
-Write-Host "
-=== Cleanup Complete ===" -ForegroundColor Green
+Write-Host "`n=== Cleanup Complete ===" -ForegroundColor Green
 Write-Host "Total items deleted: $deleted" -ForegroundColor Green
 
 
 ### 🔍 Deep Clean (Optional)
-
 # Run in PowerShell as Administrator
 
 $warpKeys = @(
